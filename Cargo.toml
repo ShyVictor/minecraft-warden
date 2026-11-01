@@ -1,0 +1,12 @@
+[package]
+name = "warden"
+version = "0.1.0"
+edition = "2024"
+description = "A lightweight TCP tunneling tool for Minecraft Java Edition through authenticated HTTP CONNECT and SOCKS5 proxies"
+
+[dependencies]
+async-http-proxy = { version = "1.2.5", features = ["basic-auth", "runtime-tokio"] }
+clap = { version = "4.6.7", features = ["derive"] }
+tokio = { version = "1.54.1", features = ["full"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
